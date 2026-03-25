@@ -290,18 +290,23 @@ h2 {
   line-height: 1.6;
 }
 
-/* Semua link footer - tosca */
+/* Semua link footer - putih */
 .footer-col a {
   display: block;
   text-decoration: none;
-  color: #22d3ee;
+  color: #cbd5f5;
   margin-bottom: 8px;
   font-size: 14px;
   transition: 0.2s;
 }
 
+/* Contact - tosca */
+.footer-col a.highlight {
+  color: #22d3ee;
+}
+
 .footer-col a:hover {
-  color: #38bdf8;
+  color: #22d3ee;
   transform: translateX(3px);
 }
 
@@ -358,6 +363,10 @@ h2 {
 }
 
 .light-mode .footer-col a {
+  color: #334155;
+}
+
+.light-mode .footer-col a.highlight {
   color: #0891b2;
 }
 
