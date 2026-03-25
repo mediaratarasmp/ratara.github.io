@@ -10,10 +10,14 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: radial-gradient(circle at top, #0b1f3a, #020617 80%);
   color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CONTAINER */
 .container {
+  flex: 1;
   padding: 20px;
   text-align: center;
   margin-top: 10px;
@@ -252,7 +256,7 @@ h2 {
 
 /* ================= FOOTER ================= */
 .footer {
-  margin-top: 60px;
+  margin-top: auto;
   padding: 40px 20px 20px;
   background: #020617;
   border-top: 1px solid rgba(56, 189, 248, 0.1);
@@ -266,14 +270,18 @@ h2 {
   margin: auto;
 }
 
+/* RATARASMP - oranye */
 .footer-col h2 {
   margin-bottom: 10px;
   font-size: 20px;
+  color: #f97316;
 }
 
+/* Quick Links, Server, Legal - tosca */
 .footer-col h3 {
   margin-bottom: 10px;
   font-size: 15px;
+  color: #22d3ee;
 }
 
 .footer-col p {
@@ -282,17 +290,18 @@ h2 {
   line-height: 1.6;
 }
 
+/* Semua link footer - tosca */
 .footer-col a {
   display: block;
   text-decoration: none;
-  color: #cbd5f5;
+  color: #22d3ee;
   margin-bottom: 8px;
   font-size: 14px;
   transition: 0.2s;
 }
 
 .footer-col a:hover {
-  color: #22d3ee;
+  color: #38bdf8;
   transform: translateX(3px);
 }
 
@@ -349,7 +358,7 @@ h2 {
 }
 
 .light-mode .footer-col a {
-  color: #020617;
+  color: #0891b2;
 }
 
 .light-mode .footer-col p {
@@ -358,4 +367,8 @@ h2 {
 
 .light-mode .footer-copy {
   color: #64748b;
+}
+
+.light-mode .footer-col h3 {
+  color: #0891b2;
 }
