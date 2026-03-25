@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0b1220, #05080f);
+  color: #fff;
+  text-align: center;
+}
+
+/* CONTAINER */
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #aaa;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* CARD */
+.cards {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(0, 200, 255, 0.4);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0, 200, 255, 0.2);
+}
+
+/* CORNER BUTTON */
+.corner-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.corner-btn:hover {
+  background: rgba(0, 200, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+}
