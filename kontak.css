@@ -1,0 +1,71 @@
+/* WRAPPER BIAR AMAN */
+.contact-page {
+  padding: 20px;
+}
+
+/* CONTAINER KHUSUS */
+.contact-container {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+/* TEXT */
+.contact-container h1 {
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+/* LIST */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* BOX */
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #e2e8f0;
+
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(8px);
+
+  transition: 0.25s;
+}
+
+.contact-box:hover {
+  transform: scale(1.03);
+  border-color: #22d3ee;
+}
+
+/* ICON */
+.contact-box i {
+  font-size: 16px;
+  background: #22d3ee;
+  color: #020617;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* ROLE */
+.contact-box .role {
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+/* NAME DI KANAN */
+.contact-box .name {
+  margin-left: auto;
+}
