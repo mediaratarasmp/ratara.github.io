@@ -1,6 +1,7 @@
 /* WRAPPER */
 .group-page {
   padding: 20px;
+  flex: 1;
 }
 
 /* CONTAINER */
