@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - RATARA SMP</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grup.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar-container"></div>
+
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+
+  <!-- NOTIF -->
+  <div id="notif" class="notif">
+    <i class="fa-solid fa-bell"></i>
+    <span>Berhasil Menyalin Ke Clipboard</span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="group-page">
+    <div class="group-container">
+
+      <h1>Community RATARASMP</h1>
+      <p class="group-desc">
+        Bergabunglah dengan komunitas resmi RATARA SMP!<br>
+        Temukan teman baru, info terbaru,<br>
+        dan keseruan bareng player lainnya.
+      </p>
+
+      <!-- WHATSAPP -->
+      <a href="https://chat.whatsapp.com/EXAMPLE" target="_blank" class="group-box">
+        <i class="fa-brands fa-whatsapp group-logo"></i>
+
+        <div class="group-info">
+          <span>Group WhatsApp</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <div class="group-actions">
+          <button onclick="copyLink(event, 'https://chat.whatsapp.com/EXAMPLE')">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      </a>
+
+      <!-- DISCORD -->
+      <a href="https://discord.gg/EXAMPLE" target="_blank" class="group-box">
+        <i class="fa-brands fa-discord group-logo discord"></i>
+
+        <div class="group-info">
+          <span>Discord Community</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <div class="group-actions">
+          <button onclick="copyLink(event, 'https://discord.gg/EXAMPLE')">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="grup.js"></script>
+
+</body>
+</html>
