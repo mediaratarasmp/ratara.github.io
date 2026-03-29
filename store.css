@@ -1,3 +1,8 @@
+/* body store.html ikut tema dark biar nyambung sama navbar */
+body {
+  background: #07050f;
+}
+
 /* ── STORE PAGE — semua selector di-scope ke .store-page biar ga nabrak style.css ── */
 
 .store-page {
@@ -273,5 +278,4 @@
 
 @media (max-width: 600px) {
   .sp-modal { padding: 24px 18px; }
-                    }
-
+}
