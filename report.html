@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report — Ratara SMP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar-container"></div>
+
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+
+  <div class="report-page">
+
+    <div class="rp-hero">
+      <h1>Bantuan</h1>
+      <p>Kami siap membantu! Isi formulir di bawah ini dan kami akan membalas secepatnya.</p>
+    </div>
+
+    <div class="rp-card">
+      <h2>Formulir Kontak</h2>
+      <p class="rp-sub">Kirim pesan kepada kami dan kami akan merespons secepat mungkin.</p>
+
+      <label>Username</label>
+      <input type="text" id="rpUsername" placeholder="Username Minecraft Anda" />
+
+      <label>Subjek</label>
+      <select id="rpSubjek">
+        <option value="" disabled selected>Pilih Subjek</option>
+        <option value="Laporkan Pemain">Laporkan Pemain</option>
+        <option value="Laporan Bug">Laporan Bug</option>
+        <option value="Permintaan Fitur">Permintaan Fitur</option>
+        <option value="Pertanyaan Umum">Pertanyaan Umum</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <label>Deskripsi</label>
+      <textarea id="rpDeskripsi" rows="5" placeholder="Silakan jelaskan masalah atau pertanyaan Anda secara rinci..."></textarea>
+
+      <button id="rpKirim">Kirim Pesan</button>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+  <script src="report.js"></script>
+</body>
+</html>
