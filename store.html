@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store — Ratara SMP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="store.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar-container"></div>
+
+  <!-- OVERLAY -->
+  <div id="overlay"></div>
+
+  <div class="store-page">
+
+  <div class="mesh"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">✦ Official Store</div>
+    <h1>Ratara Store</h1>
+    <p>Dukung server & dapatkan keunggulan dalam game. Pembayaran via QRIS — cepat, aman, mudah.</p>
+  </section>
+
+  <!-- TABS -->
+  <div class="tabs-wrapper">
+    <div class="tab active" data-cat="all"><span class="tab-icon">🏪</span> Semua</div>
+    <div class="tab" data-cat="rank"><span class="tab-icon">👑</span> Rank / VIP</div>
+    <div class="tab" data-cat="crate"><span class="tab-icon">🎁</span> Crate Key</div>
+    <div class="tab" data-cat="kit"><span class="tab-icon">⚔️</span> Item & Kit</div>
+
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="store-section">
+
+    <!-- RANK -->
+    <div class="category-block" data-section="rank">
+      <div class="section-label">👑 Rank &amp; VIP</div>
+      <div class="grid">
+
+        <div class="card tier-vip" data-cat="rank" data-name="VIP" data-price="15000">
+          <div class="card-banner">👑</div>
+          <div class="card-body">
+            <div class="card-title">VIP</div>
+            <ul class="card-perks">
+              <li>Prefix [VIP] berwarna di chat</li>
+              <li>Kit VIP setiap 24 jam</li>
+              <li>Akses /fly di Spawn</li>
+              <li>3 set rumah (/sethome)</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp15.000 <span>/bulan</span></div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-mvp" data-cat="rank" data-name="MVP" data-price="30000">
+          <div class="card-banner">
+            <span class="card-badge badge-popular">Populer</span>💎
+          </div>
+          <div class="card-body">
+            <div class="card-title">MVP</div>
+            <ul class="card-perks">
+              <li>Prefix [MVP] animasi warna</li>
+              <li>Kit MVP setiap 12 jam</li>
+              <li>Akses /fly di semua world</li>
+              <li>8 set rumah (/sethome)</li>
+              <li>1 Crate Key Rare gratis</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp30.000 <span>/bulan</span></div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-legend" data-cat="rank" data-name="Legend" data-price="60000">
+          <div class="card-banner">
+            <span class="card-badge badge-best">Best</span>🏆
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legend</div>
+            <ul class="card-perks">
+              <li>Prefix [LEGEND] gradient warna</li>
+              <li>Kit Legend setiap 6 jam</li>
+              <li>Akses /fly + /speed</li>
+              <li>Unlimited set rumah</li>
+              <li>3 Crate Key Legendary gratis</li>
+              <li>Akses fitur eksklusif Legend</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp60.000 <span>/bulan</span></div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CRATE KEY -->
+    <div class="category-block" data-section="crate">
+      <div class="section-label">🎁 Crate Key</div>
+      <div class="grid">
+
+        <div class="card tier-crate" data-cat="crate" data-name="Common Key x5" data-price="10000">
+          <div class="card-banner">🗝️</div>
+          <div class="card-body">
+            <div class="card-title">Common Key x5</div>
+            <ul class="card-perks">
+              <li>Item-item common berguna</li>
+              <li>Chance enchantment tool</li>
+              <li>Bonus XP bottle</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp10.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-crate" data-cat="crate" data-name="Rare Key x3" data-price="20000">
+          <div class="card-banner">
+            <span class="card-badge badge-popular">Populer</span>🔑
+          </div>
+          <div class="card-body">
+            <div class="card-title">Rare Key x3</div>
+            <ul class="card-perks">
+              <li>Item rare & enchanted</li>
+              <li>Chance mount cosmetic</li>
+              <li>In-game money reward</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp20.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-crate" data-cat="crate" data-name="Legendary Key x1" data-price="25000">
+          <div class="card-banner">
+            <span class="card-badge badge-best">Hot</span>🌟
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legendary Key x1</div>
+            <ul class="card-perks">
+              <li>Item legendary & exclusive</li>
+              <li>Chance pet & particle effect</li>
+              <li>Jackpot uang in-game besar</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp25.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- KIT & ITEM -->
+    <div class="category-block" data-section="kit">
+      <div class="section-label">⚔️ Item &amp; Kit</div>
+      <div class="grid">
+
+        <div class="card tier-kit" data-cat="kit" data-name="Starter Kit" data-price="8000">
+          <div class="card-banner">
+            <span class="card-badge badge-new">New</span>🛡️
+          </div>
+          <div class="card-body">
+            <div class="card-title">Starter Kit</div>
+            <ul class="card-perks">
+              <li>Full armor iron enchanted</li>
+              <li>Tools set lengkap</li>
+              <li>Food & potion awal</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp8.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-kit" data-cat="kit" data-name="Warrior Kit" data-price="18000">
+          <div class="card-banner">⚔️</div>
+          <div class="card-body">
+            <div class="card-title">Warrior Kit</div>
+            <ul class="card-perks">
+              <li>Full armor diamond enchanted</li>
+              <li>Sword Sharpness V + Fire Aspect</li>
+              <li>Bow Power V + Infinity</li>
+              <li>Golden Apple x10</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp18.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tier-kit" data-cat="kit" data-name="Builder Kit" data-price="12000">
+          <div class="card-banner">🏗️</div>
+          <div class="card-body">
+            <div class="card-title">Builder Kit</div>
+            <ul class="card-perks">
+              <li>Tools Efficiency V + Silk Touch</li>
+              <li>Berbagai material bangunan</li>
+              <li>Elytra + Rocket x32</li>
+            </ul>
+            <div class="card-footer">
+              <div class="card-price">Rp12.000</div>
+              <button class="btn-buy">Beli</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  </div><!-- /.store-page -->
+
+  <!-- MODAL -->
+  <div class="sp-modal-overlay" id="modalOverlay">
+    <div class="sp-modal">
+      <button class="sp-modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle">VIP Rank</h3>
+      <div class="sp-modal-price" id="modalPrice">Rp15.000</div>
+
+      <label>Username Minecraft kamu</label>
+      <input type="text" id="inputUsername" placeholder="contoh: Steve123" />
+
+      <label>Tipe Minecraft</label>
+      <div class="sp-radio-group">
+        <label class="sp-radio-option">
+          <input type="radio" name="mctype" value="Java" checked /> Java
+        </label>
+        <label class="sp-radio-option">
+          <input type="radio" name="mctype" value="Bedrock" /> Bedrock
+        </label>
+      </div>
+
+      <div class="sp-qris-box">
+        <img src="qris.png" alt="QRIS" class="sp-qr-img" onerror="this.style.display='none';document.getElementById('qris-fallback').style.display='block'" />
+        <div id="qris-fallback" style="display:none;padding:20px;font-size:.8rem;color:#888;">[Taruh file qris.png di folder yang sama]</div>
+        <p>Scan QRIS di atas untuk membayar</p>
+      </div>
+
+      <p class="sp-modal-note">Setelah scan & bayar, klik tombol di bawah untuk kirim bukti transfer ke Admin via WhatsApp.</p>
+      <button class="sp-btn-confirm" id="btnKirim">Kirim Bukti Transfer</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+  <script src="store.js"></script>
+</body>
+</html>
