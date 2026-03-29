@@ -1,0 +1,195 @@
+/* ── STRUKTUR PAGE — scoped ke .str-page ── */
+
+.str-page {
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 80px) 20px 80px;
+}
+
+.str-page .str-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.str-page .str-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.str-page .str-hero p {
+  font-size: .95rem;
+  color: #94a3b8;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.str-page .str-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* TIER */
+.str-page .str-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.str-page .str-tier-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 99px;
+}
+
+.str-page .owner-label   { background: rgba(251,191,36,.12);  color: #fbbf24; border: 1px solid rgba(251,191,36,.3); }
+.str-page .coowner-label { background: rgba(148,163,184,.1);  color: #94a3b8; border: 1px solid rgba(148,163,184,.25); }
+.str-page .dev-label     { background: rgba(99,102,241,.12);  color: #818cf8; border: 1px solid rgba(99,102,241,.3); }
+.str-page .admin-label   { background: rgba(34,211,238,.1);   color: #22d3ee; border: 1px solid rgba(34,211,238,.25); }
+
+/* CARDS WRAPPER */
+.str-page .str-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* CARD */
+.str-page .str-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+  padding: 28px 24px;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform .3s, box-shadow .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.str-page .str-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.str-page .owner-card   { border: 1px solid rgba(251,191,36,.3);  box-shadow: 0 0 30px rgba(251,191,36,.08); }
+.str-page .coowner-card { border: 1px solid rgba(148,163,184,.2); box-shadow: 0 0 30px rgba(148,163,184,.05); }
+.str-page .dev-card     { border: 1px solid rgba(99,102,241,.3);  box-shadow: 0 0 30px rgba(99,102,241,.08); }
+.str-page .admin-card   { border: 1px solid rgba(34,211,238,.2);  box-shadow: 0 0 30px rgba(34,211,238,.06); }
+
+.str-page .owner-card::before   { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.str-page .coowner-card::before { background: linear-gradient(90deg, #64748b, #94a3b8); }
+.str-page .dev-card::before     { background: linear-gradient(90deg, #6366f1, #818cf8); }
+.str-page .admin-card::before   { background: linear-gradient(90deg, #22d3ee, #38bdf8); }
+
+.str-page .str-card:hover {
+  transform: translateY(-6px);
+}
+
+.str-page .owner-card:hover   { box-shadow: 0 16px 40px rgba(251,191,36,.2); }
+.str-page .coowner-card:hover { box-shadow: 0 16px 40px rgba(148,163,184,.15); }
+.str-page .dev-card:hover     { box-shadow: 0 16px 40px rgba(99,102,241,.2); }
+.str-page .admin-card:hover   { box-shadow: 0 16px 40px rgba(34,211,238,.15); }
+
+/* AVATAR */
+.str-page .str-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.str-page .owner-avatar   { background: rgba(251,191,36,.15); border: 2px solid rgba(251,191,36,.4); }
+.str-page .coowner-avatar { background: rgba(148,163,184,.1); border: 2px solid rgba(148,163,184,.3); }
+.str-page .dev-avatar     { background: rgba(99,102,241,.15); border: 2px solid rgba(99,102,241,.4); }
+.str-page .admin-avatar   { background: rgba(34,211,238,.1);  border: 2px solid rgba(34,211,238,.3); }
+
+.str-page .str-avatar i { font-size: 1.8rem; }
+
+/* NAME & ROLE */
+.str-page .str-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.str-page .str-role {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.str-page .owner-role   { color: #fbbf24; }
+.str-page .coowner-role { color: #94a3b8; }
+.str-page .dev-role     { color: #818cf8; }
+.str-page .admin-role   { color: #22d3ee; }
+
+.str-page .str-desc {
+  font-size: .8rem;
+  color: #64748b;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* BADGE */
+.str-page .str-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .7rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 99px;
+  margin-top: 4px;
+}
+
+.str-page .owner-badge   { background: rgba(251,191,36,.15);  color: #fbbf24; }
+.str-page .coowner-badge { background: rgba(148,163,184,.1);  color: #94a3b8; }
+.str-page .dev-badge     { background: rgba(99,102,241,.15);  color: #818cf8; }
+.str-page .admin-badge   { background: rgba(34,211,238,.1);   color: #22d3ee; }
+
+/* NOTE */
+.str-page .str-note {
+  text-align: center;
+  font-size: .85rem;
+  color: #64748b;
+  padding: 20px;
+  border: 1px dashed rgba(56,189,248,.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.str-page .str-note i {
+  color: #38bdf8;
+}
+
+@media (max-width: 500px) {
+  .str-page .str-card { width: 100%; max-width: 300px; }
+  }
+                                             
