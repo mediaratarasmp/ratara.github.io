@@ -1,0 +1,142 @@
+/* ── REPORT PAGE — semua selector di-scope ke .report-page biar ga nabrak style.css ── */
+
+.report-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(40px, 8vw, 80px) 20px 80px;
+}
+
+.report-page .rp-hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.report-page .rp-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.report-page .rp-hero p {
+  font-size: .95rem;
+  color: #94a3b8;
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.report-page .rp-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 18px;
+  padding: clamp(24px, 5vw, 40px);
+  width: 100%;
+  max-width: 560px;
+  backdrop-filter: blur(10px);
+}
+
+.report-page .rp-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.report-page .rp-sub {
+  font-size: .85rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.report-page .rp-card label {
+  display: block;
+  font-size: .82rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+.report-page .rp-card input[type="text"],
+.report-page .rp-card select,
+.report-page .rp-card textarea {
+  width: 100%;
+  padding: 11px 14px;
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: .9rem;
+  outline: none;
+  transition: border-color .2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.report-page .rp-card input[type="text"]:focus,
+.report-page .rp-card select:focus,
+.report-page .rp-card textarea:focus {
+  border-color: #22d3ee;
+}
+
+.report-page .rp-card input::placeholder,
+.report-page .rp-card textarea::placeholder {
+  color: #475569;
+}
+
+.report-page .rp-select-wrap {
+  position: relative;
+}
+.report-page .rp-select-wrap::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #38bdf8;
+  pointer-events: none;
+  font-size: .75rem;
+}
+
+.report-page .rp-card select option {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.report-page .rp-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.report-page .rp-card button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  color: #020617;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .2s, transform .15s;
+}
+
+.report-page .rp-card button:hover {
+  opacity: .88;
+  transform: scale(1.02);
+}
+
+.report-page .rp-card button:active {
+  transform: scale(.98);
+  }
+
