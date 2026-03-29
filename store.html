@@ -6,8 +6,8 @@
   <title>Store — Ratara SMP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="store.css" />
 </head>
@@ -255,13 +255,14 @@
       </div>
 
       <div class="sp-qris-box">
-        <img src="qris.png" alt="QRIS" class="sp-qr-img" onerror="this.style.display='none';document.getElementById('qris-fallback').style.display='block'" />
-        <div id="qris-fallback" style="display:none;padding:20px;font-size:.8rem;color:#888;">[Taruh file qris.png di folder yang sama]</div>
+        <img src="https://i.imgur.com/6BamdVp.jpeg" alt="QRIS" class="sp-qr-img" />
         <p>Scan QRIS di atas untuk membayar</p>
       </div>
 
-      <p class="sp-modal-note">Setelah scan & bayar, klik tombol di bawah untuk kirim bukti transfer ke Admin via WhatsApp.</p>
-      <button class="sp-btn-confirm" id="btnKirim">Kirim Bukti Transfer</button>
+      <div style="display:flex;gap:10px;margin-bottom:14px;">
+        <button class="sp-btn-confirm" id="btnKirim" style="flex:1;">Kirim Bukti Transfer</button>
+        <a href="https://i.imgur.com/6BamdVp.jpeg" download="QRIS-RataraSMP.jpeg" class="sp-btn-confirm" style="flex:0 0 auto;width:auto;padding:13px 16px;text-decoration:none;text-align:center;">⬇ Download QRIS</a>
+      </div>
     </div>
   </div>
 
