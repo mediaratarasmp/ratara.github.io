@@ -1,3 +1,18 @@
+// ── DOWNLOAD QRIS ──
+document.getElementById('btnDownloadQris').addEventListener('click', async () => {
+  try {
+    const response = await fetch('https://i.imgur.com/6BamdVp.jpeg');
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'QRIS-RataraSMP.jpeg';
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch {
+    alert('Gagal download, coba screenshot manual ya!');
+  }
+});
 // ── TABS ──
 const tabs     = document.querySelectorAll('.tab');
 const sections = document.querySelectorAll('.category-block');
