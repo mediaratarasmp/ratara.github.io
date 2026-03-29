@@ -1,0 +1,167 @@
+/* ── TOS PAGE — semua selector di-scope ke .tos-page ── */
+
+.tos-page {
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 80px) 20px 80px;
+}
+
+.tos-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tos-page .tos-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.tos-page .tos-hero p {
+  font-size: .95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.tos-page .tos-updated {
+  display: inline-block;
+  font-size: .78rem;
+  color: #38bdf8;
+  border: 1px solid rgba(56,189,248,.25);
+  border-radius: 99px;
+  padding: 4px 16px;
+}
+
+.tos-page .tos-container {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tos-page .tos-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  transition: border-color .2s;
+}
+
+.tos-page .tos-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.tos-page .tos-card-danger {
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.tos-page .tos-card-danger:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.tos-page .tos-section-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(34, 211, 238, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22d3ee;
+  font-size: .95rem;
+  margin-bottom: 14px;
+}
+
+.tos-page .tos-card-danger .tos-section-icon {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.tos-page .tos-card h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.tos-page .tos-card p {
+  font-size: .88rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.tos-page .tos-card p:last-child {
+  margin-bottom: 0;
+}
+
+.tos-page .tos-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.tos-page .tos-card ul li {
+  font-size: .87rem;
+  color: #94a3b8;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.tos-page .tos-card ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #22d3ee;
+  font-weight: 700;
+}
+
+.tos-page .tos-card-danger ul li::before {
+  color: #ef4444;
+}
+
+.tos-page .tos-card strong {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.tos-page .tos-contact {
+  text-align: center;
+  padding: 32px 20px;
+  color: #94a3b8;
+  font-size: .9rem;
+}
+
+.tos-page .tos-contact p {
+  margin-bottom: 14px;
+}
+
+.tos-page .tos-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  color: #020617;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: opacity .2s, transform .15s;
+}
+
+.tos-page .tos-btn:hover {
+  opacity: .88;
+  transform: scale(1.03);
+}
+
