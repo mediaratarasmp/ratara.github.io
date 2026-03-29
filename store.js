@@ -38,8 +38,6 @@ document.querySelectorAll('.btn-buy').forEach(btn => {
     modalTitle.textContent = card.dataset.name;
     modalPrice.textContent = formatRupiah(card.dataset.price);
     document.getElementById('inputUsername').value = '';
-    document.getElementById('inputNama').value = '';
-    document.getElementById('inputHP').value = '';
     overlay.classList.add('open');
   });
 });
@@ -79,4 +77,3 @@ Mohon dikonfirmasi ya, terima kasih! 🙏`;
   window.open(url, '_blank');
   overlay.classList.remove('open');
 });
-
