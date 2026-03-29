@@ -1,0 +1,248 @@
+/* ── RULES PAGE — scoped ke .rules-page ── */
+
+.rules-page {
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 80px) 20px 80px;
+}
+
+.rules-page .rules-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rules-page .rules-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.rules-page .rules-hero p {
+  font-size: .95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 14px;
+}
+
+.rules-page .rules-badge {
+  display: inline-block;
+  font-size: .78rem;
+  color: #22d3ee;
+  border: 1px solid rgba(34,211,238,.25);
+  border-radius: 99px;
+  padding: 4px 16px;
+}
+
+.rules-page .rules-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* CATEGORY */
+.rules-page .rules-category {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.rules-page .rules-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: rgba(34, 211, 238, 0.07);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+  font-weight: 700;
+  font-size: .95rem;
+  color: #22d3ee;
+}
+
+.rules-page .acid-header {
+  background: rgba(132, 204, 22, 0.07);
+  color: #84cc16;
+  border-bottom-color: rgba(132, 204, 22, 0.2);
+}
+
+.rules-page .rules-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-page .rules-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.07);
+  transition: background .2s;
+}
+
+.rules-page .rules-item:last-child {
+  border-bottom: none;
+}
+
+.rules-page .rules-item:hover {
+  background: rgba(34, 211, 238, 0.04);
+}
+
+.rules-page .rules-item-danger:hover {
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.rules-page .rules-num {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(34, 211, 238, 0.12);
+  color: #22d3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .85rem;
+  flex-shrink: 0;
+}
+
+.rules-page .rules-num.danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.rules-page .rules-num.acid {
+  background: rgba(132, 204, 22, 0.12);
+  color: #84cc16;
+}
+
+.rules-page .rules-content {
+  flex: 1;
+}
+
+.rules-page .rules-title {
+  font-weight: 700;
+  color: #e2e8f0;
+  font-size: .95rem;
+  margin-bottom: 6px;
+}
+
+.rules-page .rules-desc {
+  font-size: .85rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+.rules-page .rules-punishment {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: .03em;
+}
+
+.rules-page .rules-punishment.low {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.rules-page .rules-punishment.medium {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+}
+
+.rules-page .rules-punishment.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+/* PUNISHMENT TABLE */
+.rules-page .rules-punish-table {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+}
+
+.rules-page .rules-punish-table h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.rules-page .pt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.rules-page .pt-item {
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.rules-page .pt-item.low    { background: rgba(34,197,94,.08);  border: 1px solid rgba(34,197,94,.2); }
+.rules-page .pt-item.medium { background: rgba(251,191,36,.08); border: 1px solid rgba(251,191,36,.2); }
+.rules-page .pt-item.high   { background: rgba(239,68,68,.08);  border: 1px solid rgba(239,68,68,.2); }
+.rules-page .pt-item.danger { background: rgba(139,0,0,.15);    border: 1px solid rgba(239,68,68,.4); }
+
+.rules-page .pt-level {
+  font-weight: 700;
+  font-size: .85rem;
+  margin-bottom: 4px;
+}
+
+.rules-page .pt-item.low    .pt-level { color: #22c55e; }
+.rules-page .pt-item.medium .pt-level { color: #fbbf24; }
+.rules-page .pt-item.high   .pt-level { color: #ef4444; }
+.rules-page .pt-item.danger .pt-level { color: #ff0000; }
+
+.rules-page .pt-desc {
+  font-size: .78rem;
+  color: #94a3b8;
+}
+
+/* CONTACT */
+.rules-page .rules-contact {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: .9rem;
+}
+
+.rules-page .rules-contact p {
+  margin-bottom: 14px;
+}
+
+.rules-page .rules-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  color: #020617;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: opacity .2s, transform .15s;
+}
+
+.rules-page .rules-btn:hover {
+  opacity: .88;
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .rules-page .rules-item { padding: 16px; }
+  .rules-page .rules-cat-header { padding: 14px 16px; }
+                   }
+                                               
