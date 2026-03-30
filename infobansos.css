@@ -1,0 +1,330 @@
+/* ── BANSOS PAGE — scoped ke .bansos-page ── */
+
+.bansos-page {
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 80px) 20px 80px;
+}
+
+/* HERO */
+.bansos-page .bs-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bansos-page .bs-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34,211,238,.1);
+  border: 1px solid rgba(34,211,238,.25);
+  border-radius: 99px;
+  padding: 6px 18px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: #22d3ee;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.bansos-page .bs-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.bansos-page .bs-hero p {
+  font-size: .95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+
+.bansos-page .bs-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(251,191,36,.08);
+  border: 1px solid rgba(251,191,36,.25);
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: .82rem;
+  color: #fbbf24;
+}
+
+/* CONTAINER */
+.bansos-page .bs-container {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* MAIN CARD */
+.bansos-page .bs-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+}
+
+.bansos-page .bs-release {
+  border: 1px solid rgba(34,211,238,.25);
+  box-shadow: 0 0 40px rgba(34,211,238,.06);
+}
+
+/* CARD HEADER */
+.bansos-page .bs-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bansos-page .bs-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(34,211,238,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #22d3ee;
+  flex-shrink: 0;
+}
+
+.bansos-page .bs-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: .05em;
+}
+
+.bansos-page .bs-card-sub {
+  font-size: .78rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.bansos-page .bs-status {
+  margin-left: auto;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.bansos-page .bs-status.active {
+  background: rgba(34,197,94,.15);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,.3);
+  animation: bsPulse 2s ease infinite;
+}
+
+@keyframes bsPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .6; }
+}
+
+/* DIVIDER */
+.bansos-page .bs-divider {
+  height: 1px;
+  background: rgba(56,189,248,.1);
+  margin: 20px 0;
+}
+
+/* REWARDS */
+.bansos-page .bs-reward-label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bansos-page .bs-rewards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bansos-page .bs-reward-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: rgba(2,6,23,.5);
+  border-radius: 12px;
+  border: 1px solid rgba(56,189,248,.08);
+  transition: border-color .2s;
+}
+
+.bansos-page .bs-reward-item:hover {
+  border-color: rgba(56,189,248,.2);
+}
+
+.bansos-page .bs-reward-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.bansos-page .bs-reward-icon.key    { background: rgba(251,191,36,.12); color: #fbbf24; }
+.bansos-page .bs-reward-icon.shards { background: rgba(99,102,241,.12); color: #818cf8; }
+.bansos-page .bs-reward-icon.money  { background: rgba(34,197,94,.12);  color: #22c55e; }
+
+.bansos-page .bs-reward-name {
+  font-weight: 700;
+  color: #e2e8f0;
+  font-size: .95rem;
+}
+
+.bansos-page .bs-reward-desc {
+  font-size: .78rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* ALERT */
+.bansos-page .bs-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(239,68,68,.08);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: .85rem;
+  color: #fca5a5;
+}
+
+.bansos-page .bs-alert i {
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+/* INFO CARD */
+.bansos-page .bs-info-card {
+  background: rgba(15,23,42,.9);
+  border: 1px solid rgba(56,189,248,.12);
+  border-radius: 18px;
+  padding: 24px 28px;
+  backdrop-filter: blur(10px);
+}
+
+.bansos-page .bs-info-card h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bansos-page .bs-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bansos-page .bs-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bansos-page .bs-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(34,211,238,.12);
+  color: #22d3ee;
+  font-weight: 700;
+  font-size: .82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bansos-page .bs-step-text {
+  font-size: .87rem;
+  color: #94a3b8;
+}
+
+/* DATE & TIME */
+.bansos-page .bs-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.bansos-page .bs-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.bansos-page .bs-date i {
+  color: #22d3ee;
+}
+
+.bansos-page .bs-date-note {
+  font-size: .72rem;
+  font-weight: 500;
+  color: #fbbf24;
+  background: rgba(251,191,36,.1);
+  border: 1px solid rgba(251,191,36,.2);
+  border-radius: 99px;
+  padding: 2px 8px;
+  margin-left: 4px;
+}
+
+.bansos-page .bs-times {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bansos-page .bs-time-item {
+  background: rgba(2,6,23,.6);
+  border: 1px solid rgba(56,189,248,.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bansos-page .bs-tz {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: .06em;
+}
+
+.bansos-page .bs-t {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #22d3ee;
+  font-variant-numeric: tabular-nums;
+            }
+
