@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jadwal Bansos — Ratara SMP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bansos.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+  <div id="sidebar-container"></div>
+  <div id="overlay"></div>
+
+  <div class="bansos-page">
+
+    <div class="bs-hero">
+      <div class="bs-hero-badge"><i class="fas fa-gift"></i> Bantuan Sosial Server</div>
+      <h1>Jadwal Bansos</h1>
+      <p>Dapatkan item gratis dari server! Pantau jadwal di bawah dan jangan sampai ketinggalan.</p>
+      <div class="bs-warning">
+        <i class="fas fa-clock"></i>
+        Jadwal dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.
+      </div>
+    </div>
+
+    <div class="bs-container">
+
+      <!-- CARD BANSOS -->
+      <div class="bs-card bs-release">
+        <div class="bs-card-header">
+          <div class="bs-card-icon"><i class="fas fa-rocket"></i></div>
+          <div>
+            <div class="bs-card-title">RELEASE</div>
+            <div class="bs-card-sub">Bansos Perdana Server</div>
+          </div>
+          <div class="bs-status active">AKTIF</div>
+        </div>
+
+        <div class="bs-divider"></div>
+
+        <div class="bs-reward-label"><i class="fas fa-calendar-alt"></i> Tanggal & Waktu</div>
+        <div class="bs-datetime">
+          <div class="bs-date">
+            <i class="fas fa-calendar"></i>
+            <span>5 April 2026 <span class="bs-date-note">(Tentatif)</span></span>
+          </div>
+          <div class="bs-times">
+            <div class="bs-time-item"><span class="bs-tz">WIB</span><span class="bs-t">19:00</span></div>
+            <div class="bs-time-item"><span class="bs-tz">WITA</span><span class="bs-t">20:00</span></div>
+            <div class="bs-time-item"><span class="bs-tz">WIT</span><span class="bs-t">21:00</span></div>
+            <div class="bs-time-item"><span class="bs-tz">UTC+8</span><span class="bs-t">20:00</span></div>
+          </div>
+        </div>
+
+        <div class="bs-divider"></div>
+
+        <div class="bs-reward-label"><i class="fas fa-box-open"></i> Hadiah yang Dibagikan</div>
+        <div class="bs-rewards">
+          <div class="bs-reward-item">
+            <div class="bs-reward-icon key"><i class="fas fa-key"></i></div>
+            <div class="bs-reward-name">Key</div>
+            <div class="bs-reward-desc">Crate key untuk membuka hadiah eksklusif</div>
+          </div>
+          <div class="bs-reward-item">
+            <div class="bs-reward-icon shards"><i class="fas fa-gem"></i></div>
+            <div class="bs-reward-name">Shards</div>
+            <div class="bs-reward-desc">Mata uang premium server</div>
+          </div>
+          <div class="bs-reward-item">
+            <div class="bs-reward-icon money"><i class="fas fa-coins"></i></div>
+            <div class="bs-reward-name">Money</div>
+            <div class="bs-reward-desc">Uang in-game untuk bertransaksi</div>
+          </div>
+        </div>
+
+        <div class="bs-divider"></div>
+
+        <div class="bs-alert">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Tidak ada bansos susulan — jadi jangan sampai ketinggalan!</span>
+        </div>
+      </div>
+
+      <!-- INFO CARA DAPAT -->
+      <div class="bs-info-card">
+        <h3><i class="fas fa-info-circle"></i> Cara Mendapatkan Bansos</h3>
+        <div class="bs-steps">
+          <div class="bs-step">
+            <div class="bs-step-num">1</div>
+            <div class="bs-step-text">Login ke server saat bansos berlangsung</div>
+          </div>
+          <div class="bs-step">
+            <div class="bs-step-num">2</div>
+            <div class="bs-step-text">Pantau pengumuman di chat server atau Discord</div>
+          </div>
+          <div class="bs-step">
+            <div class="bs-step-num">3</div>
+            <div class="bs-step-text">Ikuti instruksi Admin untuk klaim hadiah</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
