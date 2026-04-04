@@ -3,79 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RATARA SMP</title>
+  <meta name="theme-color" content="#1565c0">
+  <meta name="description" content="Jajanan pasar tradisional asli Pak Rahmat — Lontong, Nagasari, Mendut, Pukis. Pesan via WhatsApp.">
+  <title>Jajanan Pak Rahmat</title>
 
-  <!-- FONT AWESOME -->
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS halaman ini -->
+  <link rel="stylesheet" href="css/style-index.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<div id="navbar"></div>
-
-<!-- SIDEBAR -->
-<div id="sidebar-container"></div>
-
-<!-- CONTENT -->
-<div class="container">
-
-  <!-- NOTIF -->
-  <div id="notif" class="notif">
-    <i class="fas fa-check-circle"></i>
-    <span>Berhasil menyalin ke clipboard!</span>
-  </div>
-
-  <!-- LOGO -->
-  <img src="https://i.imgur.com/xHthblN.png" class="logo">
-
-  <!-- BUTTON -->
-  <button class="btn main" onclick="copyIP()">
-    <i class="fas fa-play"></i> Join Now
-  </button>
-
-  <a href="https://discord.gg/5txXbvUJUr" target="_blank" class="btn outline">
-    <i class="fab fa-discord"></i> Join Discord
-  </a>
-
-  <a href="https://chat.whatsapp.com/F7QL2jqqWLVLqv5TCL42AK?mode=gi_t" target="_blank" class="btn outline">
-    <i class="fab fa-whatsapp"></i> Join Grup WhatsApp
-  </a>
-
-  <!-- INFO -->
-  <div class="card">
-    <i class="fas fa-gamepad icon"></i>
-    <div>
-      <p class="label">Version</p>
-      <h2>1.21.4</h2>
+  <!-- ── TOPBAR ── -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="#">🍃 Pak Rahmat <span class="logo-badge">JAJAN</span></a>
+      <div class="searchbar">
+        <input type="text" id="searchInput" placeholder="Cari jajanan..." oninput="doSearch(this.value)">
+        <button><i class="fas fa-search"></i></button>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <i class="fas fa-server icon"></i>
-    <div>
-      <p class="label">Player Register</p>
-      <h2>70+</h2>
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-badge">🍃 Fresh Setiap Hari</div>
+    <h1>Jajanan <em>Pak Rahmat</em></h1>
+    <p>Jajanan pasar tradisional asli, dibuat dengan cinta tanpa pengawet</p>
+    <div class="hero-chips">
+      <span class="chip">🚀 Pesan via WA</span>
+      <span class="chip">✅ Tanpa Pengawet</span>
+      <span class="chip">📦 Siap Antar</span>
     </div>
   </div>
 
-  <div class="card">
-    <i class="fas fa-network-wired icon"></i>
-    <div>
-      <p class="label">Bedrock Port</p>
-      <h2>19132</h2>
+  <!-- ── KONTEN UTAMA ── -->
+  <div class="wrap">
+
+    <!-- Kategori -->
+    <div class="cat-strip">
+      <button class="cat-btn active" onclick="filterCat('semua', this)">
+        <div class="cat-icon">🏪</div>
+        <span class="cat-label">Semua</span>
+      </button>
+      <button class="cat-btn" onclick="filterCat('makanan', this)">
+        <div class="cat-icon">🍱</div>
+        <span class="cat-label">Makanan</span>
+      </button>
+      <button class="cat-btn" onclick="filterCat('kue', this)">
+        <div class="cat-icon">🧁</div>
+        <span class="cat-label">Kue</span>
+      </button>
+    </div>
+
+    <!-- Flash bar -->
+    <div class="flash-bar">
+      <span class="flash-badge">🔥 POPULER</span>
+      <span class="flash-text">Jajanan terlaris hari ini — stok terbatas!</span>
+    </div>
+
+    <!-- Section header -->
+    <div class="sec-head">
+      <div class="sec-title">Menu Jajanan</div>
+    </div>
+
+    <!-- Grid produk — dirender oleh index.js -->
+    <div class="prod-grid" id="prodGrid"></div>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <div class="footer-logo">🍃 Jajanan Pak Rahmat</div>
+    <p>Jajanan pasar tradisional asli<br>Pesan via WhatsApp — kami siap antar ❤️</p>
+  </div>
+
+  <!-- ── BOTTOM SHEET BELI ── -->
+  <div class="overlay" id="overlay" onclick="overlayClick(event)">
+    <div class="sheet" id="sheet">
+      <div class="sheet-pill"></div>
+
+      <div class="sheet-head">
+        <div class="sheet-thumb" id="sThumb"></div>
+        <div class="sheet-info">
+          <h3 id="sName">—</h3>
+          <div class="price" id="sPrice">Rp 0</div>
+        </div>
+      </div>
+
+      <div class="sheet-body">
+
+        <!-- Varian -->
+        <div id="varWrap" style="display:none">
+          <span class="flabel">Pilih Varian</span>
+          <div class="var-grid" id="varGrid"></div>
+        </div>
+
+        <span class="flabel">Nama Kamu</span>
+        <input class="finput" type="text" id="fName"
+               placeholder="Contoh: Budi Santoso" autocomplete="name">
+
+        <span class="flabel">Nomor WhatsApp</span>
+        <input class="finput" type="tel" id="fPhone"
+               placeholder="08xxxxxxxxxx" autocomplete="tel" inputmode="numeric">
+
+        <span class="flabel">Jumlah</span>
+        <div class="qty-wrap">
+          <button class="qty-btn" onclick="adjQty(-1)">−</button>
+          <input class="qty-num" type="number" id="fQty" value="1" min="1" max="99" oninput="qtyChanged()">
+          <button class="qty-btn" onclick="adjQty(1)">+</button>
+        </div>
+
+        <span class="flabel">Catatan (opsional)</span>
+        <input class="finput" type="text" id="fNote" placeholder="Misal: jangan terlalu manis">
+
+        <div class="total-box">
+          <span>Total Bayar</span>
+          <strong id="fTotal">Rp 0</strong>
+        </div>
+
+      </div>
+
+      <div class="sheet-foot">
+        <button class="btn-batal" onclick="closeSheet()">Batal</button>
+        <button class="btn-wa" id="btnWa" onclick="sendOrder()">
+          <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+        </button>
+      </div>
     </div>
   </div>
 
-</div>
+  <!-- ── TOAST ── -->
+  <div class="toast" id="toast"></div>
 
-<!-- FOOTER -->
-<div id="footer"></div>
+  <!-- ── PWA INSTALL BAR ── -->
+  <div class="pwa-bar" id="pwaBar">
+    <p>📱 Install app Jajanan Pak Rahmat!</p>
+    <button class="pwa-install" onclick="doInstall()">Install</button>
+    <button class="pwa-close"
+      onclick="document.getElementById('pwaBar').classList.remove('show')">✕</button>
+  </div>
 
-<!-- JS -->
-<script src="script.js"></script>
+  <!--
+    Firebase ES Module — WAJIB type="module"
+    ⚠️ Ganti semua nilai "GANTI_..." dengan config Firebase kamu
+       (Firebase Console → Project Settings → Your Apps → SDK)
+  -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const cfg = {
+      apiKey:            "GANTI_API_KEY",
+      authDomain:        "GANTI.firebaseapp.com",
+      projectId:         "GANTI_PROJECT_ID",
+      storageBucket:     "GANTI.appspot.com",
+      messagingSenderId: "GANTI_SENDER_ID",
+      appId:             "GANTI_APP_ID"
+    };
+
+    try {
+      const app = initializeApp(cfg);
+      const db  = getFirestore(app);
+      window.__saveOrder = data =>
+        addDoc(collection(db, 'pesanan'), { ...data, waktu: serverTimestamp() });
+    } catch (e) {
+      console.warn('Firebase init gagal:', e.message);
+    }
+  </script>
+
+  <!-- App JS -->
+  <script src="js/index.js" defer></script>
 
 </body>
 </html>
