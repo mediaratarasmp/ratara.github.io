@@ -1,4 +1,4 @@
-const WA_ADMINS = ['6281276274398', '6285143590943'];
+const WA_ADMINS = ['6281276274398'];
 const WA_REPORT = WA_ADMINS[Math.floor(Math.random() * WA_ADMINS.length)];
 
 document.getElementById('rpKirim').addEventListener('click', () => {
