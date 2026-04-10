@@ -63,10 +63,11 @@
   color: #22d3ee;
 }
 
-.rules-page .acid-header {
-  background: rgba(132, 204, 22, 0.07);
-  color: #84cc16;
-  border-bottom-color: rgba(132, 204, 22, 0.2);
+/* Ekonomi header — kuning */
+.rules-page .eco-header {
+  background: rgba(251,191,36,.07);
+  color: #fbbf24;
+  border-bottom-color: rgba(251,191,36,.2);
 }
 
 .rules-page .rules-list {
@@ -113,9 +114,10 @@
   color: #ef4444;
 }
 
-.rules-page .rules-num.acid {
-  background: rgba(132, 204, 22, 0.12);
-  color: #84cc16;
+/* Ekonomi num — kuning */
+.rules-page .rules-num.eco {
+  background: rgba(251,191,36,.12);
+  color: #fbbf24;
 }
 
 .rules-page .rules-content {
@@ -244,5 +246,4 @@
 @media (max-width: 600px) {
   .rules-page .rules-item { padding: 16px; }
   .rules-page .rules-cat-header { padding: 14px 16px; }
-                   }
-                                               
+}
